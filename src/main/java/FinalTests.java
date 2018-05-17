@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 
 public class FinalTests {
 
+
     private WebDriver driver;
     private Methods methods;
 
@@ -39,5 +40,30 @@ public class FinalTests {
     @Test
     public void createNewUser() throws InterruptedException {
         methods.newUser();
+    }
+
+    @Test
+    public void productSeach(){
+        methods.seachProduct();
+    }
+
+    @Test
+    public void addAndRemuveProduct() throws InterruptedException {
+        methods.seachProduct();
+        methods.addProduct();
+        methods.removeProduct();
+    }
+
+    @Test
+    public void tShirts(){
+        methods.searchTShirts();
+    }
+
+    @Test
+    public void buyProduct() throws InterruptedException {
+        methods.newUser();
+        methods.seachProduct();
+        methods.addProduct();
+        methods.buyProduct();
     }
 }
